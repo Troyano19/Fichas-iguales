@@ -10,15 +10,18 @@ public class Main{
      */    
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        int games;
+        int games = 0;
         List<String> salida = new ArrayList<String>();
         //Introducimos el número de juegos a jugar.
-        games = sc.nextInt();
-        //Comprueba que exista al menos un juego, si no finaliza.
-        if(games < 1){
-            sc.close();
-            return;
-        }
+        do{
+            //! Utilizamos 'print' y no 'println' para que el numero introducido se muestre en la misma linea que el texto.
+            System.out.print("Introduzca el número de juegos a jugar: ");
+            games = sc.nextInt();
+            //Comprueba que exista al menos un juego, si no finaliza.
+            if(games < 1){
+                System.out.println("El número de juegos debe ser mayor o igual que 1.");
+            }
+        }while(games < 1);
         //Vaciamos el buffer
         sc.nextLine();
         //Introducimos la primera linea en blanco y en caso de no serlo, finaliza.
