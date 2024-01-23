@@ -14,7 +14,7 @@ public class Main{
         List<String> salida = new ArrayList<String>();
         //Introducimos el número de juegos a jugar.
         do{
-            //! Utilizamos 'print' y no 'println' para que el numero introducido se muestre en la misma linea que el texto.
+            // Utilizamos 'print' y no 'println' para que el numero introducido se muestre en la misma linea que el texto.
             System.out.print("Introduzca el número de juegos a jugar: ");
             games = sc.nextInt();
             //Comprueba que exista al menos un juego, si no finaliza.
@@ -24,6 +24,15 @@ public class Main{
         }while(games < 1);
         //Vaciamos el buffer
         sc.nextLine();
+        //Explicamos al usuario como debe introducir los tableros
+        System.out.println("\nA partir de ahora, debes de introducir las letras de los colores Azul 'A', Rojo 'R' y Verde 'V'.");
+        System.out.println("Debes utilizar el mismo número de columnas para cada fila. No se aplica entre distintos juegos.");
+        System.out.println("Aquí tienes un ejemplo de tablero válido:");
+        System.out.println("\nARV");
+        System.out.println("VAV");
+        System.out.println("VRA\n");
+        System.out.println("En caso de que hayas elegido más de un juego, introduce una línea en blanco entre cada uno de ellos.");
+        System.out.println("¡Que te diviertas! [Pulsa Enter para continuar]");
         //Introducimos la primera linea en blanco y en caso de no serlo, finaliza.
         String text = sc.nextLine();
         if(!text.isEmpty()){
